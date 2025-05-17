@@ -8,6 +8,7 @@
   border-top: 2px solid rgb(157, 149, 149);
   overflow: hidden;
   position: relative;
+  justify-content: center;
 }
 
 
