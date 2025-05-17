@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import "./StickyAd.css";
+import "./stickyAd.css";
 
 function StickyAd() {
   const [showLeftAd, setShowLeftAd] = useState(true);
