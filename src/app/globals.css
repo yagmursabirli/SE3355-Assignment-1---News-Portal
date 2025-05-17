@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #f1ebeb;
 }
 
 @theme inline {
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f3f0f0;
     --foreground: #ededed;
   }
 }
@@ -23,4 +23,59 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.main-slider-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 1200px; 
+}
+
+
+.slider-left {
+ width: 670px; 
+  flex-shrink: 0;
+}
+
+
+.slider-right {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; 
+  gap: 30px;
+  width: 460px;
+}
+.small-news-box,
+.weather-wrapper {
+  width: 100%;     
+  max-width: 100%;
+}
+@media (max-width: 768px) {
+  .main-slider-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .slider-left,
+  .slider-right {
+    width: 100%;
+    max-width: 100%;
+    gap: 16px; 
+  }
+
+  .slider-image-wrapper {
+    height: 220px;
+  }
+
+  .small-news-box img {
+    height: 140px;
+  }
+
+  .weather-days {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }

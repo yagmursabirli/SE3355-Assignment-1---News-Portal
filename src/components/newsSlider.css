@@ -1,0 +1,128 @@
+.main-slider-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 1200px; 
+}
+
+.slider-left {
+  width: 670px; 
+  flex-shrink: 0;
+}
+
+
+.slider-right {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 30px;
+}
+
+
+
+ .slider-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start; 
+  margin: 20px;
+  margin-left: 200px;
+}
+
+.slider-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: transparent;
+  aspect-ratio: auto;    
+  height: auto;           
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;          
+  object-fit: contain;   
+  display: block;
+  border-radius: 12px;
+}
+
+
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.slider-button.left {
+  left: 20px;
+}
+
+.slider-button.right {
+  right: 20px;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+  .main-slider-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px; 
+    margin: 0 12px; 
+  }
+
+  .slider-left,
+  .slider-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .small-news-wrapper {
+    gap: 16px;
+    padding: 0;
+  }
+
+  .small-news-box {
+    margin-top: 0;
+  }
+
+  .weather-wrapper {
+    margin-top: 12px; 
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .main-slider-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 30px;
+  }
+
+  .slider-left,
+  .slider-right {
+    width: 100%;
+    max-width: 700px; 
+  }
+
+}
