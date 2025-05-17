@@ -1,14 +1,15 @@
 .finance-bar {
   display: flex;
-  background-color: #F5F5F7; 
+  background-color: #F5F5F7;
   padding: 6px 350px;
   font-family: Arial, sans-serif;
   font-size: 13px;
   border-bottom: 1px solid #ccc;
   border-top: 2px solid rgb(157, 149, 149);
-  
- 
+  overflow: hidden;
+  position: relative;
 }
+
 
 .finance-item {
   display: flex;
@@ -36,4 +37,51 @@
 .finance-item .change.red {
   color: #cc0000;
   font-weight: bold;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.finance-bar {
+  background-color: #F5F5F7;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  border-bottom: 1px solid #ccc;
+  border-top: 2px solid rgb(157, 149, 149);
+  overflow: hidden;
+  height: 36px;
+  position: relative;
+  padding: 0; 
+}
+
+.finance-content {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .finance-bar {
+    padding: 0 12px;
+  }
+
+  .finance-content {
+    animation: scroll-left 30s linear infinite; 
+  }
+
+  .finance-item {
+    flex-shrink: 0;
+    padding-right: 30px;
+  }
+
+  .finance-content::after {
+    content: attr(data-repeat);
+    display: inline-block;
+    white-space: nowrap;
+  }
 }

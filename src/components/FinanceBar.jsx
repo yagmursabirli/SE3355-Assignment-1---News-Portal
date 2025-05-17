@@ -12,15 +12,19 @@ function FinanceBar() {
   }, []);
 
   return (
-    <div className="finance-bar">
-      {items.map((item, index) => (
-        <div key={index} className="finance-item">
-          <span className="name">{item.name}</span>
-          <span className="value">{item.value}</span>
-          <span className={`change ${item.color}`}>{item.change}</span>
-        </div>
-      ))}
-    </div>
+<div className="finance-bar">
+  <div className="finance-content">
+    {items.map((item, index) => (
+      <div key={index} className="finance-item">
+        <span className="name">{item.name}</span>
+        <span className="value">{item.value}</span>
+        <span className={`change ${item.color}`}>{item.change}</span>
+      </div>
+    ))}
+  </div>
+</div>
+
+
   );
 }
 
